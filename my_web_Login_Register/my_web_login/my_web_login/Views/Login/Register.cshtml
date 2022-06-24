@@ -1,0 +1,103 @@
+﻿@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers 
+@model my_web_login.Models.Kullanici
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Pages/_Layout.cshtml";
+}
+@*@using (Html.BeginForm("Register"))
+{<table>
+    <tr>
+        <td>
+            Kullanici Adı:
+        </td>
+        <td>
+            <input type="text" placeholder="Kullanıcı adı giriniz." asp-for="KullaniciAdi"/>
+        </td>
+        
+    </tr>
+    <tr>
+        <td>
+            Sifre:
+        </td>
+        <td>
+            <input type="text" placeholder="Sifre giriniz." asp-for="Sifre"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Sifre Tekrar:
+        </td>
+        <td>
+            <input type="text" placeholder="Sifre giriniz." asp-for="Sifre2" />
+            <span asp-validation-for="Sifre2"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="submit" value="Register"/>
+        </td>
+    </tr>
+</table>
+    
+}*@
+@using(Html.BeginForm("Register")){
+
+    <div class="container" style="margin:auto;width:900px;height:500px;margin-top:120px;border-radius:20px 20px 20px 20px;">
+        <div class="container-left"style="width:450px;float:left;height:500px;background-color:white;border-radius:20px 0px 0px 20px;">
+            <h3 class="title" style="margin-left:36%;margin-top:75px;font-size:35px;">Kayıt Ol</h3>
+    <table class="Login-left;" style="margin-top:70px;margin-left:20%;">     
+        <tr>         
+            <td>
+                
+            </td>
+            <td>
+                <input  type="text" placeholder="Kullanıcı Adı" asp-for="KullaniciAdi" style="height:45px;width:270px;border:0px;background-color:#eeeeee;margin-left:10%;margin-right:10%;margin-top:5px;"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+            
+            <td>
+                <input type="password" placeholder="Şifre " asp-for="Sifre"style="height:45px;width:270px;border:0px;background-color:#eeeeee;margin-left:10%;margin-right:10%;margin-top:5px;"/>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                 <input type="password" placeholder="Şifre tekrar" asp-for="Sifre2"style="height:45px;width:270px;border:0px;background-color:#eeeeee;margin-left:10%;margin-right:10%;margin-top:5px;" />
+            <span asp-validation-for="Sifre2"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <input type="submit" value="KAYIT OL" style="margin-left:25%;margin-top:30px;border:0px;border-radius:20px 20px 20px 20px;height:45px;width:160px;background-color:orangered;color:white;"/>
+            </td>
+        </tr>
+         
+    </table>
+    </div>
+    <div class="margin-right"style="float:left;width:450px;height:500px;background-color:#ff4557;border-radius:0px 20px 20px 0px;">
+            <h1 style="margin-left:38%;margin-top:170px;color:white;font-size:30px;">Merhaba!</h1>
+            <span style="margin-left:23%;margin-right:20%;margin-top:10px;color:white;font-size:16px;">Kişisel bilgilerinizi girin ve bizimle</span>
+            <span style="margin-left:35%;margin-right:35%;color:white;font-size:16px;margin-top:1px;">yolculuğa başlayın</span>
+           <a href="~/Login/Login"><input type="button" value="Giriş Yap " style="margin-left:34%;margin-top:30px;border:1px solid white;border-radius:20px 20px 20px 20px;height:45px;width:160px;background-color:#ff4457;color:white;"/></a>
+    </div>
+    </div>
+}
+
+<style>
+
+    body{
+        background-image:url("https://wallpaperaccess.com/full/47551.jpg");
+        background-repeat:no-repeat;
+        
+    }
+
+</style>
+
+
